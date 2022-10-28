@@ -13,26 +13,26 @@ You want to run all those python scripts on Vertex AI Pipelines. You can pack yo
 * You create a new directory `vertex_pipelines` to store all related code
 * You add `setup.py` to build `vertex-pipelines-examples` python package:
 
-** Make sure you are in the correct folder.
+1. Make sure you are in the correct folder.
 
 ```
 $ cd /vertex-pipelines-examples
 python setup.py sdist
 ```
 
-** Copy the resulting your_package_name.tar.gz to the GCP bucket.
+2. Copy the resulting your_package_name.tar.gz to the GCP bucket.
 
 ```
 gsutil cp ./dist/your_package_name.tar.gz gs://your_backet/your_package_name.tar.gz
 ```
 
-** Copy your existing configuration file into vertex_pipelines directory.
+3. Copy your existing configuration file into vertex_pipelines directory.
 
 ```
 cp config.yaml vertex_pipelines/config/config.yaml
 ```
 
-** Add new configurations to `vertex_pipelines/config/config.yaml`. Below, `bucket/tar_path` is the location of `your_package_name.tar.gz` from the step above.
+4. Add new configurations to `vertex_pipelines/config/config.yaml`. Below, `bucket/tar_path` is the location of `your_package_name.tar.gz` from the step above.
 
 ```
 bucket: 'gs://your_backet'
@@ -42,4 +42,4 @@ labels:
     use-case: your_label
 ```
 
-** Run the serving pipeline on Vertex AI Pipelines as shown in compilej_and_run_pipeline.py.
+* Run the serving pipeline on Vertex AI Pipelines as shown in compilej_and_run_pipeline.py.

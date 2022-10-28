@@ -1,0 +1,20 @@
+# Config file for variables that shouldn't be added to version control.
+
+# Dataflow config:
+
+dataflow_region: 'us-east4'
+# other configs
+machine_type: 'n1-standard-32'
+max_num_workers: 4
+
+# BigQuery config:
+
+data_project_id: 'your_gcp_project'
+
+# Vertex Pipeline
+
+bucket: 'gs://your_backet'
+tar_path: 'pipelines/your_package_name/your_package_name.tar.gz'
+pipeline_job_name: `your_package_name-serving'
+labels:
+    use-case: your_label

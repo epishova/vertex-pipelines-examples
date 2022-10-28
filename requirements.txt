@@ -1,0 +1,4 @@
+apache-beam[gcp]==2.35.0
+google-cloud-bigquery==2.31.0
+google-cloud-bigquery-storage==2.10.1
+google-cloud-retail==1.2.1

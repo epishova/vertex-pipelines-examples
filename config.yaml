@@ -1,0 +1,11 @@
+# Config file for variables that shouldn't be added to version control.
+
+# Dataflow config:
+
+dataflow_region: 'us-east4'
+# other configs
+machine_type: 'n1-standard-32'
+max_num_workers: 4
+
+# BigQuery config:
+data_project_id: 'your_gcp_project'
